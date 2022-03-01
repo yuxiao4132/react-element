@@ -441,10 +441,9 @@ class Shop extends React.Component {
                         <div className='container'>
                             <div className='content'>
                                 <SideBar activeKey={this.state.activeKey} onChange={val=>{this.setActiveKey(val)}}>
-                
-                                        {this.state.shoplist.map(item => (
+                                        {this.state.shoplist.length ? this.state.shoplist.map(item => (
                                             <SideBar.Item key={item.id} title={item.name} />
-                                        ))}
+                                        )):''}
                                     
                                 </SideBar>
                             </div>
